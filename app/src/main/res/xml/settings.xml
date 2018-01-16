@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fragment="me.fistme.openclfft.SettingsFragment" >
+
+    <Preference
+        android:key="opencl"
+        android:title="OpenCL configuration"
+        android:summary="FFT benchmark, device selection"
+        android:fragment="me.fistme.openclfft.OpenCLSettingsFragment" />
+
+</PreferenceScreen>

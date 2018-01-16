@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="opencl"
+    android:title="OpenCL configuration"
+    android:summary="FFT benchmark, device selection" >
+
+    <Preference
+        android:key="benchmark"
+        android:title="Benchmark"
+        android:summary="Benchmark OpenCL device(s)" />
+
+
+    <SwitchPreference
+        android:key="opencl_auto_device"
+        android:title="Automatic device selection"
+        android:summaryOn="Benchmark determines device"
+        android:summaryOff="Select a device below"
+        android:defaultValue="true"
+        android:disableDependentsState="true" />
+
+    <PreferenceCategory
+        android:key="opencl_devices"
+        android:title="Available devices"
+        android:dependency="opencl_auto_device" >
+
+        <Preference
+            android:key="opencl_devices_placeholder"
+            android:title="Loading..."
+            android:enabled="false"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
